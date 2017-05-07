@@ -39,7 +39,9 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity android:name=".ui.DetailsActivity" />
-
+        <service
+            android:name=".StockHawkWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
         <receiver android:name=".StockHawkWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
