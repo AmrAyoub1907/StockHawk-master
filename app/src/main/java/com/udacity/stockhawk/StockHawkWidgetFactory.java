@@ -9,6 +9,7 @@ import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
+import android.widget.TextView;
 
 import com.udacity.stockhawk.data.Contract;
 
@@ -78,11 +79,14 @@ public class StockHawkWidgetFactory implements RemoteViewsService.RemoteViewsFac
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.widget_list_item);
         String symbol = mCursor.getString(INDEX_QUOTE_SYMBOL);
         String price = Float.toString(mCursor.getFloat(INDEX_QUOTE_PRICE)),
-                change = Float.toString(mCursor.getFloat(INDEX_QUOTE_ABS_CHANGE));
-
+                change = Float.toString(mCursor.getFloat(INDEX_QUOTE_PREC_CHANGE));
+        Float f = mCursor.getFloat(INDEX_QUOTE_ABS_CHANGE);
+        if (f<0){
+            rv.setInt(R.id.change, "setBackgroundResource", R.drawable.percent_change_pill_red);
+        }
             rv.setTextViewText(R.id.stock_symbol, symbol);
-            rv.setTextViewText(R.id.price, price );
-            rv.setTextViewText(R.id.stock_change, change);
+            rv.setTextViewText(R.id.price,"$"+price );
+            rv.setTextViewText(R.id.stock_change, change+"%");
 
         return rv;
     }

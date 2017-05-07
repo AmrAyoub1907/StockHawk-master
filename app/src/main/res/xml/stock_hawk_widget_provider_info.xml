@@ -3,7 +3,7 @@
     android:initialKeyguardLayout="@layout/stock_hawk_widget_provider"
     android:initialLayout="@layout/stock_hawk_widget_provider"
     android:minHeight="110dp"
-    android:minWidth="110dp"
+    android:minWidth="220dp"
     android:previewImage="@drawable/example_appwidget_preview"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="0"
