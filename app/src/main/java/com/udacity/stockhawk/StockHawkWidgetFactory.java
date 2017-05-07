@@ -13,11 +13,6 @@ import android.widget.TextView;
 
 import com.udacity.stockhawk.data.Contract;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Locale;
-
-
 /**
  * Created by Amr Ayoub on 5/6/2017.
  */
@@ -25,7 +20,6 @@ import java.util.Locale;
 public class StockHawkWidgetFactory implements RemoteViewsService.RemoteViewsFactory {
     private Cursor mCursor;
     private Context mContext;
-
     //List<String>Symbols,Prices,Changes;
     int mWidgetId;
     public final String LOG_TAG = StockHawkWidgetService.class.getSimpleName();
@@ -85,11 +79,13 @@ public class StockHawkWidgetFactory implements RemoteViewsService.RemoteViewsFac
         rv.setTextViewText(R.id.price,"$"+price );
         rv.setTextViewText(R.id.stock_change, change+"%");
         if (f > 0){
-            rv.setInt(R.id.change, "setBackgroundResource", R.drawable.percent_change_pill_green);
+            rv.setInt(R.id.stock_change, "setBackgroundResource", R.drawable.percent_change_pill_green);
         }else{
-            rv.setInt(R.id.change, "setBackgroundResource", R.drawable.percent_change_pill_red);
-
+            rv.setInt(R.id.stock_change, "setBackgroundResource", R.drawable.percent_change_pill_red);
         }
+        Intent fillInIntent = new Intent();
+        fillInIntent.putExtra("Widget", position);
+        rv.setOnClickFillInIntent(R.id.listitem, fillInIntent);
         return rv;
     }
 
