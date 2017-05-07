@@ -81,13 +81,15 @@ public class StockHawkWidgetFactory implements RemoteViewsService.RemoteViewsFac
         String price = Float.toString(mCursor.getFloat(INDEX_QUOTE_PRICE)),
                 change = Float.toString(mCursor.getFloat(INDEX_QUOTE_PREC_CHANGE));
         Float f = mCursor.getFloat(INDEX_QUOTE_ABS_CHANGE);
-        if (f<0){
+        rv.setTextViewText(R.id.stock_symbol, symbol);
+        rv.setTextViewText(R.id.price,"$"+price );
+        rv.setTextViewText(R.id.stock_change, change+"%");
+        if (f > 0){
+            rv.setInt(R.id.change, "setBackgroundResource", R.drawable.percent_change_pill_green);
+        }else{
             rv.setInt(R.id.change, "setBackgroundResource", R.drawable.percent_change_pill_red);
-        }
-            rv.setTextViewText(R.id.stock_symbol, symbol);
-            rv.setTextViewText(R.id.price,"$"+price );
-            rv.setTextViewText(R.id.stock_change, change+"%");
 
+        }
         return rv;
     }
 
