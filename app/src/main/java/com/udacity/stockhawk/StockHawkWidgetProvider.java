@@ -11,6 +11,7 @@ import com.udacity.stockhawk.ui.MainActivity;
 
 
 public class StockHawkWidgetProvider extends AppWidgetProvider {
+    
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         //context.startService(new Intent(context, QuoteIntentService.class));
