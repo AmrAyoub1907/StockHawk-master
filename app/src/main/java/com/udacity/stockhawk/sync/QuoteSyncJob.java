@@ -10,6 +10,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.widget.Toast;
 
+import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
 import com.udacity.stockhawk.data.PrefUtils;
 
@@ -103,7 +104,7 @@ public final class QuoteSyncJob {
 
                    quoteCVs.add(quoteCV);
                }catch (NullPointerException a){
-                   Toast.makeText(context, "Stock Not Found", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(context, R.string.stock_not_found, Toast.LENGTH_SHORT).show();
                }
             }
             context.getContentResolver()

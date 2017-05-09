@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Stock Hawk</string>
     <string name="dialog_add">إضافة</string>
     <string name="dialog_cancel">إلغاء</string>
     <string name="dialog_title">إضافة الأسهم</string>
