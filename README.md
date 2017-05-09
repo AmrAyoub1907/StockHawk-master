@@ -1,11 +1,15 @@
-# Stock Hawk
+Stock Hawk Udacity Nanodegree Project-3
 
-This is the starter code for project 3 in Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801). 
+This Android App is the Udacity Nanodegree project-3 Stock Hawk. This application uses the yahoo API of stocks and giving ability to view the stocks and other core functionlity that help to visualize the stock . This project following the Ribot guide lines.
 
-Check out Udacity's [Advanced Android App Development](https://www.udacity.com/course/advanced-android-app-development--ud855) course to get the skills you'll need to complete this project!
+Objective:
 
-If you're a Nanodegree student check your work againt the project [rubric](https://review.udacity.com/#!/rubrics/140/view), then click [here](https://classroom.udacity.com/nanodegrees/nd801/parts/8011345406/project) to submit your project.
+To productionize an app, taking it from a functional state to a production-ready state. This will involve finding and handling error cases, adding accessibility features, allowing for localization, adding a widget, and adding libraries.
 
-# Contrubuting
+Learning Outcomes
 
-Pull requests gratefully accepted.
+Diagnosing existing issues with an app
+Making an app accessible to sight-impaired users
+Allowing app to be localized for distribution in other countries
+Handling error cases in Android
+Adding widgets to enhance user experience
