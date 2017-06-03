@@ -12,5 +12,4 @@ This will involve finding and handling error cases, adding accessibility feature
 * Allowing app to be localized for distribution in other countries
 * Handling error cases in Android
 * Adding widgets to enhance user experience
-![alt text](https://drive.google.com/open?id=0B90u_vvbAjZTS25qN3Q2ZTluaG8)
-![alt text](https://drive.google.com/file/d/0B90u_vvbAjZTa3JHRWxHZHFQT0E/view?usp=sharing)
+
